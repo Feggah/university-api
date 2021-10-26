@@ -7,6 +7,7 @@ defmodule ApiWeb.Router do
 
   scope "/api", ApiWeb do
     pipe_through :api
+    resources "/universities", UniversityController, except: [:new, :edit]
   end
 
   pipeline :browser do
